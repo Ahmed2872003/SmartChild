@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "start": "vite build && vite preview",
+    "start:watch": "vite",
     "deploy": "gh-pages -d dist --repo https://github.com/Ahmed2872003/smart-child-front.git",
     "lint": "eslint .",
     "preview": "vite preview"
