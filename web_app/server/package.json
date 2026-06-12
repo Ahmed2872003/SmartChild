@@ -8,13 +8,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon --env-file=.env.development server.js",
-    "start:prod": "node --env-file=.env.development server.js",
-    "debug": "node --inspect server.js",
-    "seedTestData": "node --env-file=.env.development scripts/seedTestData.js",
-    "seedTestData:prod": "node --env-file=.env.production scripts/seedTestData.js",
-    "seedStoryData": "node --env-file=.env.development scripts/seedStoryData.js",
-    "seedStoryData:prod": "node --env-file=.env.production scripts/seedStoryData.js"
+    "start": "node --env-file=.env server.js",
+    "start:watch": "nodemon --env-file=.env server.js",
+    "seedTestData": "node --env-file=.env scripts/seedTestData.js",
+    "seedStoryData": "node --env-file=.env scripts/seedStoryData.js",
+    "debug": "node --inspect server.js"
   },
   "dependencies": {
     "axios": "^1.16.0",
