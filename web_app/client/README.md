@@ -1,16 +1,25 @@
-# React + Vite
+# Client / Frontend Execution Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This directory contains the Vite/React frontend application for the platform.
 
-Currently, two official plugins are available:
+## 🛠 Available Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+In the client directory, you can run the following commands:
 
-## React Compiler
+**Ensure a valid `.env` file is present in this directory before running any commands.**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Production Build & Preview
 
-## Expanding the ESLint configuration
+Compiles the React application into an optimized production build and immediately serves it locally for evaluation:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm start
+```
+
+### Development Server
+
+Starts the Vite development server with Hot Module Replacement (HMR). It will actively watch for changes in your React components and instantly update the browser during active development:
+
+```bash
+npm run start:watch
+```
