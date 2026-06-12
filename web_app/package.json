@@ -5,12 +5,8 @@
   "main": "index.js",
   "scripts": {
     "install:all": "npm install && npm install --prefix client && npm install --prefix server",
-    "dev": "concurrently \"npm run dev --prefix client\" \"npm start --prefix server\"",
-    "client": "npm run dev --prefix client",
-    "server": "npm start --prefix server",
-    "start": "concurrently \"npm run server:no-watch\" \"npm run client:no-watch\"",
-    "server:no-watch": "npm run start:prod --prefix server",
-    "client:no-watch": "npm run build --prefix client && npm run preview --prefix client",
+    "start": "concurrently \"npm run start --prefix server\" \"npm run start --prefix client\"",
+    "start:watch": "concurrently \"npm run start:watch --prefix server\" \"npm run start:watch --prefix client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
