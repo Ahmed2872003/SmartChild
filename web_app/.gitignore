@@ -1,8 +1,10 @@
 # Environment Variables
+.env
 .env.*
 .env.local
 .env.*.local
 config.env
+!.env.example
 
 # Dependencies
 node_modules/
