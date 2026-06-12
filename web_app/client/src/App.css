@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+@layer base {
+  button:disabled {
+    @apply opacity-50 cursor-not-allowed pointer-events-none;
+  }
+
+  button,
+  a {
+    @apply cursor-pointer;
+  }
+}
+
+#root {
+  height: 100vh;
+}
+
+.bg-sky-img {
+  background-image: url('./assets/images/sky.jpg');
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+}
