@@ -30,6 +30,8 @@ npm run install:all
 
 This project uses `concurrently` to launch both the client and server side-by-side from a single terminal window.
 
+**Ensure a valid `.env` file is present in this directory before running any commands.**
+
 ### Standard Execution (Evaluation/Production)
 
 To build the optimized frontend and start the backend server for a seamless local run, execute:
