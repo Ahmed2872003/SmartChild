@@ -4,11 +4,19 @@ This repository contains the unified Machine Learning backend for the SmartChild
 
 ## 🛠 Installation & Execution
 
-You can run this project either using Docker (which automates the model setup) or locally.
+**Important Prerequisite:** This repository uses **Git LFS (Large File Storage)** to securely store the large model weights. Ensure you have Git LFS installed on your system before cloning so the weights download automatically.
+
+```bash
+git lfs install
+git clone <your-repo-url>
+cd <your-repo-directory>
+```
+
+You can run this project either using Docker or locally.
 
 ### Option 1: Using Docker (Recommended)
 
-The Docker setup automatically downloads the necessary model weights and configures the system dependencies. You **do not** need to download the models manually.
+The Docker setup seamlessly configures the system dependencies and exposes the API on the standard Hugging Face port.
 
 1. Build the Docker image:
 
@@ -26,32 +34,19 @@ The Docker setup automatically downloads the necessary model weights and configu
 
 ### Option 2: Running Locally
 
-If you run the application outside of Docker, you must download the model weights manually.
+If you prefer to run the application outside of Docker, ensure your environment is set up with the required Python dependencies.
 
-**1. Model Weights Setup**
-The model weights are too large to be stored in version control and are instead hosted on Google Drive.
+1. Create a virtual environment and install dependencies:
 
-**[Download Models from Google Drive Here](https://drive.google.com/drive/folders/1519K-yMYTbHCHeDNcNufoVdkJH7catUi?usp=sharing)**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Once downloaded, extract the ZIP files:
-
-- Extract `chatbot.zip` into your chatbot model directory in `chatbot/model/weights`.
-- Extract `drawing.zip` into your emotion model root directory.
-
-**2. Start the Server**
-Create a virtual environment and install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the unified FastAPI server:
-
-```bash
-uvicorn main:app --port 5001 --reload
-```
-
-_The local API will be accessible at `http://localhost:5001`._
+2. Run the unified FastAPI server:
+   ```bash
+   uvicorn main:app --port 5001 --reload
+   ```
+   _The local API will be accessible at `http://localhost:5001`._
 
 ---
 

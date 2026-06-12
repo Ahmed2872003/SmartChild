@@ -14,7 +14,7 @@ Check out the live application here: **[smart-child-self.vercel.app](https://sma
 
 The SmartChild web application is already pre-configured to connect directly to our **production-deployed Machine Learning API** hosted on Hugging Face Spaces (**[MahmoudDiab1/smartchild-ai at main](https://huggingface.co/spaces/MahmoudDiab1/smartchild-ai/tree/main)**).
 
-**You do NOT need to download the large model weights, install Python, Docker, or run the ML backend locally to evaluate the web platform.**
+**You do NOT need to run models on your machine**
 
 ---
 
