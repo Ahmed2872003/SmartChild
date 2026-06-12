@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  smartchild-backend:
+    build: .
+    container_name: smartchild-api
+    ports:
+      - "5001:5001"
+    environment:
+      # Security (Keep this secret!)
+      - API_KEY=sc-live-8f9d2a1b4c7e5f0a9b8c7d6e5f4a3b2c
+      
+      # Pass your Google Drive zip file link here:
+      - DRIVE_URL=https://drive.google.com/file/d/1bmyI8-fZnYjBBQgKqbxePvRryRpdr-xI/view?usp=sharing
+      
+      # Model Configuration
+      - BASE_MODEL=Qwen/Qwen2.5-1.5B-Instruct
+      - MAX_NEW_TOKENS=150
+      - TEMPERATURE=0.7
+      - USE_4BIT=true
+    
+    # If running on a GPU server, uncomment the lines below to pass the GPU to Docker:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
